@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>Document</title>
+    <title>Vue3 Start!</title>
 </head>
 <body>
-    <div id="counter">
-        <button type="button">
-            Counter : 0
+    <div id="app">
+        <button type="button" v-on:click="counter++">
+            Counter : {{ counter }}
         </button>
     </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    counter : 0
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
 </body>
 </html>
