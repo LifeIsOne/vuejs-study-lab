@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>V 바인딩</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <input type="text" v-bind:placeholder="msg" />
+      <hr />
+      <button v-on:click="reverseMsg">click!</button>
+      <hr />
+      <h2>{{username}}</h2>
+      <input type="text" v-model="username" />
+      <hr />
+      <p v-if="visible">Can u see this?</p>
+      <button type="button" v-on:click="visible = true">VISIBLE</button>
+      <hr />
+      <ul>
+        <li v-for="item in items">{{ item }}</li>
+      </ul>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            msg: "아무말이나 적어보세요",
+            username: "Matthew",
+            visible: false,
+            items: ["apple", "banana", "mango"],
+          };
+        },
+        methods: {
+          hello() {
+            alert("Hello World");
+          },
+          reverseMsg() {
+            this.msg = this.msg.split("").reverse().join("");
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
