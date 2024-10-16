@@ -63,63 +63,6 @@
       <h1>정말 안나와?</h1>
     </div>
 
-    <script>
-      const App = {
-        template: `
-          <app-header></app-header>
-          <app-nav></app-nav>
-          <app-main></app-main>
-        `,
-      };
-      const AppHeader = {
-        template: `
-          <header>
-            <h1>header</h1>
-          </header>
-        `,
-      };
-      const AppNav = {
-        template: `
-          <nav>
-            <h2>nav</h2>
-            <ul>
-              <li><a href="#">메뉴1</a></li>
-              <li><a href="#">메뉴2</a></li>
-              <li><a href="#">메뉴4</a></li>
-              <li><a href="#">메뉴3</a></li>
-            </ul>
-          </nav>
-        `,
-      };
-      const AppMain = {
-        template: `
-        <main>
-          <section>
-            <board-component></board-component>
-            <board-component></board-component>
-            <board-component></board-component>
-            <board-component></board-component>
-            <board-component></board-component>
-            <board-component></board-component>
-          </section>
-        </main>
-        `,
-      };
-      const BoardComponent = {
-        template: `
-        <article class="board">
-          <div class="title">제목 1</div>
-          <div class="subtitle">부제 1</div>
-        </article>
-        `,
-      };
-
-      const app = Vue.createApp(App);
-      app.component("AppHeader", AppHeader);
-      app.component("AppNav", AppNav);
-      app.component("AppMain", AppMain);
-      app.component("BoardComponent", BoardComponent);
-      app.mount("#app");
-    </script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
