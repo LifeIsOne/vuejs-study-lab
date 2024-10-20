@@ -1,5 +1,5 @@
 {
-  "name": "vue-project-lab",
+  "name": "vue-eslint-prettier",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -20,7 +20,6 @@
     "eslint": "^9.12.0",
     "eslint-plugin-vue": "^9.29.0",
     "prettier": "^3.3.3",
-    "vite": "^5.4.8",
-    "vite-plugin-vue-devtools": "^7.4.6"
+    "vite": "^5.4.8"
   }
 }
